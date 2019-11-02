@@ -1,0 +1,20 @@
+---
+layout: body
+---
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Main -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">{{ page.title }}</h1>
+                {% assign content_img_path_is_not_empty = page.content_img_path | is_not_empty %}
+                {% if content_img_path_is_not_empty %}
+                    <span class="image fit"><img src="{{ page.content_img_path | relative_url }}" alt="" /></span>
+                {% endif %}
+                {{ content }}
+            </div>
+        </section>
+        
+    </div>
